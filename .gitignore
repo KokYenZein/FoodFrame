@@ -1,3 +1,5 @@
 .env
 server/venv
 server/service_account.json
+server/firebase_service_account.json
+.gitignore
