@@ -45,9 +45,7 @@ safety_settings = {
     HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
 }
-def process_image(image_url, ingredient_name):
-    print(f"Processing image from URL: {image_url} with ingredient name: {ingredient_name}")
-    # Add your image processing logic here
+
 # image_to_json: converts an images of food to text in json format
 # str, str(image link) -> str (.json)
 def image_to_json(image_name, image_link):
