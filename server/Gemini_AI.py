@@ -249,12 +249,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# if __name__ == '__main__':
-#     json_objects = [
-#     json.dumps({"ingredient_name": "yogurt", "serving_size": 170, "macronutrients": {"calories": 130, "total fat": 1.5, "saturated fat": 1, "trans fat": 0, "cholesterol": 5, "sodium": 80, "total carbohydrate": 26, "dietary fiber": 0, "total sugars": 22, "protein": 5}, "micronutrients": {"vitamin a": 200, "vitamin d": 0, "calcium": 170, "iron": 0, "potassium": 240}, "url": "https://example.com/yogurt.jpg"}),
-#     json.dumps({"ingredient_name": "milk", "serving_size": 200, "macronutrients": {"calories": 100, "total fat": 2.5, "saturated fat": 1.5, "trans fat": 0, "cholesterol": 10, "sodium": 100, "total carbohydrate": 12, "dietary fiber": 0, "total sugars": 12, "protein": 8}, "micronutrients": {"vitamin a": 150, "vitamin d": 100, "calcium": 280, "iron": 0, "potassium": 300}, "url": "https://example.com/milk.jpg"})
-#     ]
-    
-#     combined_result = generate_dish(json_objects)
-#     print(combined_result)

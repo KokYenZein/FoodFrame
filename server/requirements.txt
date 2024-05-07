@@ -80,3 +80,4 @@ urllib3==2.2.1
 vertexai==1.49.0
 Werkzeug==3.0.2
 zipp==3.18.1
+firebase==4.0.1

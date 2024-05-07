@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 // Get a reference to the database service
 const db = getDatabase(app);
 
-const dbRef = ref(db, "dishes");
+const dbRef = ref(db, "ingredients");
 
 // Fetch data
 get(dbRef).then((snapshot) => {
@@ -40,4 +40,3 @@ get(dbRef).then((snapshot) => {
 }).catch((error) => {
     console.error(error);
 });
-  

@@ -1,27 +1,45 @@
-// Import necessary modules
 const express = require('express');
-const bodyParser = require('body-parser');
+const { initializeApp } = require('firebase/app');
+const { getDatabase, ref, get } = require('firebase/database');
 
-// Create an instance of express
 const app = express();
-const PORT = process.env.PORT || 3000;
-const HOST = '192.168.37.35'; // Specify the IP address you want the server to listen on
+const PORT = 3000;
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: ,
+    authDomain: ,
+    projectId: ,
+    storageBucket: ,
+    messagingSenderId: ,
+    appId: ,
+    measurementId: 
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+const db = getDatabase();
 
 // Middleware to parse JSON bodies
-app.use(bodyParser.json());
+app.use(express.json());
 
-// Endpoint to receive JSON data from the React Native app
-app.post('/uploadIngredient', (req, res) => {
-    const ingredientData = req.body;
-    console.log('Received JSON Data:', ingredientData);
-    
-    // You could perform additional operations here such as saving the data to a database
-
-    // Send a response back to the client
-    res.status(200).send('Data received successfully');
+// Define a route to fetch ingredients
+app.get('/ingredients', async (req, res) => {
+    const dbRef = ref(db, 'ingredients');
+    try {
+        const snapshot = await get(dbRef);
+        if (snapshot.exists()) {
+            res.json(snapshot.val());
+        } else {
+            res.status(404).send('No ingredients found');
+        }
+    } catch (error) {
+        console.error('Failed to fetch ingredients:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 // Start the server
-app.listen(PORT, HOST, () => {
-    console.log(`Server running on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
