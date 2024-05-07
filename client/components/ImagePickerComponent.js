@@ -66,7 +66,7 @@ const ImagePickerComponent = () => {
     try {
       const firebaseUrl = await uploadImage(imageUri); // Assuming this function uploads the image and returns the URL
   
-      const response = await fetch('http://192.168.37.35:3000/upload_image_info', {
+      const response = await fetch('http://172.20.10.10:3000/upload_image_info', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

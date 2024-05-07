@@ -87,6 +87,9 @@ def image_to_json(image_name, image_link):
 
     # Parse the JSON response and add the image URL
     response_data = json.loads(clean_response)  # Convert cleaned JSON string to a dictionary
+
+    image_link = json_to_image(response_data)
+
     response_data["url"] = image_link  # Add the image link to the JSON data
 
     return response_data
@@ -158,10 +161,33 @@ def generate_dish(json_list, max_calories = None, min_protein = None):
 
     # Clean the API response text by removing markdown-like code formatting
     clean_response = responses.text.strip(" ```json \n")
+    print(clean_response)
 
+    clean_response = """
+    {
+        "dish_name": "Broccoli and Carrot Yogurt Salad",
+        "ingredients": [
+            "Broccoli",
+            "Carrots",
+            "Yogurt"
+        ],
+        "instructions": "1. Cut the broccoli into florets and the carrots into thin slices.\n2. Steam the broccoli and carrots until tender, about 5 minutes.\n3. In a large bowl, combine the broccoli, carrots, and yogurt.\n4. Season with salt and pepper to taste.\n5. Serve immediately or chill for later.",
+        "nutritional_information": {
+            "calories": 250,
+            "fat": "5",
+            "carbohydrates": "30",
+            "protein": "20"
+        },
+        "tips": [
+            "For a vegan version of this salad, use plant-based yogurt.",
+            "Add other vegetables to this salad, such as celery, cucumber, or bell pepper.",
+            "This salad is a great make-ahead meal. It will keep in the refrigerator for up to 3 days."
+        ]
+    }
+    """
     # Parse the JSON response and add the image URL
     response_data = json.loads(clean_response)  # Convert cleaned JSON string to a dictionary
-
+    
     # Extract dish_name and ingredients for the image description
     dish_description = {
         'dish_name': response_data['dish_name'],
