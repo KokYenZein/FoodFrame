@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 150,
     backgroundColor: '#b3d4c3',
-    alignItems: 'center',
     justifyContent: 'center'
   },
   image: {
@@ -38,6 +37,8 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     flexDirection: "row",
     alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 30
   },
   title:{
     fontSize: 18,

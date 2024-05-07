@@ -9,8 +9,8 @@ class Meal {
     duration,
     ingredients,
     steps,
+    macro,
     isGlutenFree,
-    isVegan,
     isVegetarian,
     isLactoseFree
   ) {
@@ -20,11 +20,11 @@ class Meal {
     this.imageUrl = imageUrl;
     this.ingredients = ingredients;
     this.steps = steps;
+    this.macro = macro;
     this.duration = duration;
     this.complexity = complexity;
     this.affordability = affordability;
     this.isGlutenFree = isGlutenFree;
-    this.isVegan = isVegan;
     this.isVegetarian = isVegetarian;
     this.isLactoseFree = isLactoseFree;
   }

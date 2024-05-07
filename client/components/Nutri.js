@@ -32,5 +32,9 @@ const styles = StyleSheet.create({
     tit: {
         fontSize: 15,
         fontWeight: 'bold'
+    },
+    item:{
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })

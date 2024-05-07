@@ -40,7 +40,12 @@ export const MEALS = [
       'The sauce will be done once the spaghetti are.',
       'Feel free to add some cheese on top of the finished dish.'
     ],
-    false,
+    {
+      calories: 100,
+      fat: 15,
+      carbohydrates: 5,
+      protein: 11,
+    },
     true,
     true,
     true
@@ -66,7 +71,12 @@ export const MEALS = [
       'Layer ham, the pineapple and cheese on the white bread',
       'Bake the toast for round about 10 minutes in the oven at 200°C'
     ],
-    false,
+    {
+      calories: 111,
+      fat: 14,
+      carbohydrates: 5,
+      protein: 11,
+    },
     false,
     false,
     false
@@ -95,7 +105,12 @@ export const MEALS = [
       'Bruch buns with ketchup',
       'Serve burger with tomato, cucumber and onion'
     ],
-    false,
+    {
+      calories: 121,
+      fat: 15,
+      carbohydrates: 5,
+      protein: 12,
+    },
     false,
     false,
     true
@@ -128,7 +143,12 @@ export const MEALS = [
       'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
       'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
     ],
-    false,
+    {
+      calories: 113,
+      fat: 15,
+      carbohydrates: 9,
+      protein: 20,
+    },
     false,
     false,
     false
@@ -160,7 +180,12 @@ export const MEALS = [
       'Prepare the salad',
       'Add salmon cubes and dressing'
     ],
-    true,
+    {
+      calories: 200,
+      fat: 11,
+      carbohydrates: 9,
+      protein: 17,
+    },
     false,
     true,
     true
@@ -193,7 +218,12 @@ export const MEALS = [
       'Cool down again for at least 4 hours',
       'Serve with orange peel'
     ],
-    true,
+    {
+      calories: 200,
+      fat: 15,
+      carbohydrates: 9,
+      protein: 20,
+    },
     false,
     true,
     false
@@ -222,7 +252,12 @@ export const MEALS = [
       'Heat a lightly oiled griddle or frying pan over medium high heat.',
       'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.'
     ],
-    true,
+    {
+      calories: 200,
+      fat: 15,
+      carbohydrates: 9,
+      protein: 20,
+    },
     false,
     true,
     false
@@ -253,7 +288,12 @@ export const MEALS = [
       'Add coconut milk',
       'Serve with rice'
     ],
-    true,
+    {
+      calories: 111,
+      fat: 15,
+      carbohydrates: 21,
+      protein: 33,
+    },
     false,
     false,
     true
@@ -300,7 +340,12 @@ export const MEALS = [
       'Stop mixing after the egg white disappears. Divide mixture between 2 prepared ramekins. Place ramekins on prepared baking sheet.',
       'Bake in preheated oven until scuffles are puffed and have risen above the top of the rims, 12 to 15 minutes.'
     ],
-    true,
+    {
+      calories: 121,
+      fat: 15,
+      carbohydrates: 5,
+      protein: 12,
+    },
     false,
     true,
     false
@@ -329,7 +374,12 @@ export const MEALS = [
       'Mix with asparagus, salad and dressing',
       'Serve with Baguette'
     ],
-    true,
+    {
+      calories: 120,
+      fat: 15,
+      carbohydrates: 6,
+      protein: 17,
+    },
     true,
     true,
     true

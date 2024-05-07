@@ -1,12 +1,9 @@
 .env
 server/venv
 server/service_account.json
-<<<<<<< HEAD
 server/firebase_service_account.json
 .gitignore
-=======
 firebase_service_account.json
->>>>>>> yz_branch
 package.json
 ImagePickerComponent.js
 find_url.py
